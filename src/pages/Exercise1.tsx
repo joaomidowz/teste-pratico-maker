@@ -30,7 +30,7 @@ function Exercise1() {
           </span>
           <button className='bg-primary text-secundary rounded-r-lg' onClick={() => decrement()}>-</button>
         </div>
-          {count === LIMIT &&(<p className='text-red-500 text-4xl'>Valor chegou ao limite!!</p>)}
+        {count === LIMIT && (<p className='text-red-500 text-4xl'>Valor chegou ao limite!!</p>)}
       </div>
     </>
   )

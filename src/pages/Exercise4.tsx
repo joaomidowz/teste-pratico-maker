@@ -49,7 +49,7 @@ export default function Exercise4() {
       user.name.toLowerCase().includes(searchName.toLowerCase())
     );
     setFilteredData(filtered);
-  } , [searchName, userData]);
+  }, [searchName, userData]);
 
   if (status === "loading") {
     return <p>Carregando...</p>;

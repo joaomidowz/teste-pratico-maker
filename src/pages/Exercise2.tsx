@@ -1,12 +1,13 @@
+
 import ProductList from "../components/ProductList";
 
 export default function Exercise2() {
 
-type Product = {
+  type Product = {
     id: number;
     name: string;
     price: number;
-};
+  };
 
   const products1: Product[] = [
     { id: 1, name: 'Banana', price: 10.98 },
@@ -15,7 +16,7 @@ type Product = {
   ];
 
   const products2: Product[] = [];
-    
+
 
   return (
     <div>

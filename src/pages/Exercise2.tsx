@@ -1,35 +1,29 @@
-import { useState } from 'react'
-import '../App.css'
+import ProductList from "../components/ProductList";
 
-function Exercise2() {
-  const [count, setCount] = useState(0)
-  const [maxReached, setMaxReached] = useState(false)
+export default function Exercise2() {
 
-  const countLImit = 10
-  if (count > countLImit) {
-    setCount(countLImit)
-    setMaxReached(true)
-  }
+type Product = {
+    id: number;
+    name: string;
+    price: number;
+};
 
-  if (maxReached) {
-    alert("Limite máximo atingido!")
-    setMaxReached(false)
-  }
+  const products1: Product[] = [
+    { id: 1, name: 'Banana', price: 10.98 },
+    { id: 2, name: 'Computador Logitech', price: 4998.98 },
+    { id: 3, name: 'Limpador de Tela', price: 29.99 },
+  ];
+
+  const products2: Product[] = [];
+    
 
   return (
-    <>
-      <h1>Exercicio 01</h1>
-      <div className="card">
-        <div className='flex items-center justify-center'>
-          <button className='bg-primary text-secundary rounded-l-lg' onClick={() => setCount((count) => count + 1)}>+</button>
-          <a className='text-white text-2xl bg-secundary px-4 py-1.5'>
-            Contagem: {count}
-          </a>
-          <button className='bg-primary text-secundary rounded-r-lg' onClick={() => setCount((count) => count - 1)}>-</button>
-        </div>
+    <div>
+      <h1>Product List</h1>
+      <div className="flex flex-col items-center justify-center p-10">
+        <ProductList title="Lista de produto 01" products={products1} />
+        <ProductList title="Lista de produto 02" products={products2} />
       </div>
-    </>
-  )
+    </div>
+  );
 }
-
-export default Exercise2

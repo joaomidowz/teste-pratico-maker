@@ -1,5 +1,5 @@
 
-import ProductList from "../components/ProductList";
+import ProductList from "../../components/ProductList";
 
 export default function Exercise2() {
 

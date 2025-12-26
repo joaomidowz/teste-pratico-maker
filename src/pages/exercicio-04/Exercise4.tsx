@@ -15,7 +15,7 @@ type Status = "idle" | "loading" | "success" | "error";
 const url = 'https://jsonplaceholder.typicode.com/users';
 
 export default function Exercise4() {
-  const [users, setUsers] = useState(url);
+  const [users] = useState(url);
   const [filteredData, setFilteredData] = useState<User[]>([]);
   const [userData, setUserData] = useState<User[]>([]);
   const [status, setStatus] = useState<Status>("idle");

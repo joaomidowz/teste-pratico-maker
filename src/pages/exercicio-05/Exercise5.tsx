@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { Card } from "../components/Cards";
-import { BarChart } from "../components/Bar";
+import { Card } from "../../components/Cards";
+import { BarChart } from "../../components/Bar";
 
 type Cart = {
   id: number;
